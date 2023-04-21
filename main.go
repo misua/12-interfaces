@@ -5,16 +5,7 @@ import (
 	"strconv"
 )
 
-func main() {
-
-	printPlayerMessage("asmongold", "belatra")
-	printPlayerMessage("kiko")
-
-	printPlayerNameAndAge("indaysara", "25")
-	printPlayerNameAndAge("bastiduts", 6)
-
-}
-
+// if input is string, then it will convert that here using Atoi(32bits limit)
 func printPlayerNameAndAgeStr(s1, s2 string) {
 	age, err := strconv.Atoi(s2)
 	if err != nil {
@@ -26,6 +17,7 @@ func printPlayerNameAndAgeStr(s1, s2 string) {
 
 }
 
+// if input is Int, it will go here
 func printPlayerNameAndAgeInt(s1 string, s2 int) {
 	fmt.Printf("player name: %s, and Age: %d\n", s1, s2)
 }
@@ -44,4 +36,14 @@ func printPlayerNameAndAge(s1 string, s2 interface{}) {
 
 func printPlayerMessage(player ...string) {
 	fmt.Printf("player %s is on the starting line \n", player)
+}
+
+func main() {
+
+	printPlayerMessage("asmongold", "belatra")
+	printPlayerMessage("kiko")
+
+	printPlayerNameAndAge("indaysara", "25")
+	printPlayerNameAndAge("bastiduts", 6)
+
 }
